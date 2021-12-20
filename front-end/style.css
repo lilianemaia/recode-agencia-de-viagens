@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: calc(100vh - 150px);
+  background: no-repeat center/cover url("/img/bg.jpg");
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+  color: #002e65;
+}
+
+header nav p {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5em;
+  transition: text-shadow 0.6s;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  color: #ffb800;
+  transition: 0.4s;
+}
+
+.header-content {
+  color: #fff;
+  font-weight: bold;
+  max-width: 400px;
+  margin: 150px auto;
+  text-align: center;
+  animation: ease text-move 2s forwards;
+}
+
+.header-content h1 {
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+@keyframes text-move {
+  from {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  border: 0;
+  cursor: pointer;
+  background-color: rgb(255, 184, 0);
+  color: #fff;
+}
+
+/* PROMOÇÕES */
+
+.promocoes {
+  background-color: rgba(235, 231, 231, 0.363);
+  padding: 25px;
+}
+
+.promocoes .promocoes-cards {
+  /* background: #333; */
+  margin: auto;
+  max-width: 950px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.promocoes .promocoes-title {
+  width: 100%;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+}
+
+.promocoes .card {
+  margin: 25px;
+  width: 250px;
+  height: 350px;
+  background: #fff;
+  border-radius: 24px 0px;
+  box-shadow: 0px 0px 4px -1px #222;
+  position: relative;
+  transition: all 1s;
+}
+
+.promocoes .card:hover {
+  transform: scale(1.1);
+}
+
+.promocoes .card-image {
+  width: 250px;
+  height: 200px;
+  border-radius: 24px 0 0 0;
+  object-fit: cover;
+}
+
+.promocoes .card-content {
+  padding: 0 15px;
+}
+
+.promocoes .card-content h1 {
+  font-size: 0.9rem;
+}
+
+.promocoes .card-content ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+
+.promocoes .card-content ul li {
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  margin: 3px 0px;
+  color: gray;
+  font-weight: bold;
+}
+
+.promocoes .card-content li svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.promocoes .card .card-tag-top {
+  position: absolute;
+  background: #ffb800;
+  right: 0;
+  top: 15px;
+  border-radius: 8px 0 0 8px;
+  padding: 5px 10px;
+  box-shadow: 1px 2px 5px -2px #222;
+}
+
+.promocoes .card .card-tag-bottom {
+  position: absolute;
+  left: 0;
+  top: 160px;
+  background: #1d61dd;
+  border-radius: 0 8px 8px 0;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 4px 1px #222;
+}
+
+.promocoes .card .card-tag p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #ffff;
+}
+
+/* DESTINOS */
+
+.destinos {
+  padding: 15px;
+}
+
+.destinos .destinos-title {
+  text-align: center;
+  margin: 25px;
+}
+
+.destinos .destinos-cards {
+  display: flex;
+  padding: 35px 0;
+  max-width: 950px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.destinos .card {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.destinos .card svg {
+  width: 60px;
+  height: 60px;
+  margin: 50px 0;
+  transition: all 1s;
+}
+
+.destinos .card svg:hover {
+  color: #f56c11;
+  transform: scale(1.1);
+}
+
+.destinos .card h3 {
+  font-weight: bold;
+}
+
+.destinos .card p {
+  color: gray;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.destinos .card .card-content {
+  height: 100px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+}
+
+.contato {
+  /* padding: 60px; */
+  background-color: #e1e8f7;
+  position: relative;
+}
+
+.contato .contato-card {
+  width: 350px;
+  height: 300px;
+  padding: 0 30px;
+  background: #fff;
+  position: absolute;
+  z-index: 99;
+
+  border-radius: 8px;
+
+  top: calc(50% - 150px);
+  left: calc(20% - 170px);
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+
+.contato .contato-card h1 {
+  padding-right: 58px;
+}
+
+.contato .contato-card li {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: gray;
+
+  display: flex;
+  align-items: center;
+}
+
+.contato .contato-card li svg {
+  width: 16px;
+  margin: 10px;
+}
+
+/* RESPONSIVIDADE */
+
+/* Especial para Mapa */
+@media (max-width: 902px) {
+  .contato {
+    padding: 60px;
+  }
+
+  .contato .contato-card {
+    left: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .contato {
+    padding: 40px 0;
+  }
+
+  .contato .contato-card {
+    position: static;
+    margin: 40px auto;
+  }
+}
+
+/* Para Tablet */
+@media (max-width: 767px) {
+}
+
+/* Para mobile */
+@media (max-width: 480px) {
+  body {
+    margin-bottom: 55px;
+  }
+
+  header nav ul {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    z-index: 100;
+
+    background: #073da1;
+    color: #fff;
+    font-weight: bold;
+    height: 55px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav p {
+    width: 100%;
+    text-align: center;
+  }
+}

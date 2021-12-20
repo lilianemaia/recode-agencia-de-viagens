@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dendê Agência de Viagens</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="./img/logo.png" alt="logo">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#promocoes">Promoções</a></li>
+        <li><a href="#destinos">Destinos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div id="home" class="header-content">
+      <h1>Programe sua nova experiência com a gente!</h1>
+      <button>Saiba mais</button>
+    </div>
+  </header>
+
+  <section id="promocoes" class="promocoes">
+    <h1 class="promocoes-title">Conheça nossos pacotes</h1>
+
+    <div class="promocoes-cards">
+      <div class="card">
+        <div class="card-tag card-tag-top">
+          <p>Promoção</p>
+        </div>
+        <div class="card-tag card-tag-bottom">
+          <p>R$ 1450,00</p>
+        </div>
+        <img class="card-image" src="img/jeri.jpeg" alt="Jericoacoara">
+        <div class="card-content">
+          <h1>Pacote 5 noites em Jericoacoara</h1>
+          <ul>
+            <li><i data-feather="coffee"></i>Café da manhã incluso</li>
+            <li><i data-feather="wifi"></i>Wi-Fi</li>
+            <li><i data-feather="map"></i>Passeio</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-tag card-tag-top">
+          <p>Promoção</p>
+        </div>
+        <div class="card-tag card-tag-bottom">
+          <p>R$ 1390,00</p>
+        </div>
+        <img class="card-image" src="img/ssa.jpeg" alt="Salvador">
+        <div class="card-content">
+          <h1>Pacote 10 dias em Salvador</h1>
+          <ul>
+            <li><i data-feather="coffee"></i>Café da manhã incluso</li>
+            <li><i data-feather="wifi"></i>Wi-Fi</li>
+            <li><i data-feather="map"></i>Passeio incluso</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-tag card-tag-top">
+          <p>Promoção</p>
+        </div>
+        <div class="card-tag card-tag-bottom">
+          <p>R$ 1270,00</p>
+        </div>
+        <img class="card-image" src="img/rj.jpeg" alt="Rio de Janeiro">
+        <div class="card-content">
+          <h1>Pacote 4 noites no Rio de Janeiro</h1>
+          <ul>
+            <li><i data-feather="coffee"></i>Café da manhã incluso</li>
+            <li><i data-feather="wifi"></i>Wi-Fi</li>
+            <li><i data-feather="map"></i>Passeio</li>
+          </ul>
+        </div>
+      </div>
+  </section>
+
+  <section id="destinos" class="destinos">
+    <h1 class="destinos-title">Destinos</h1>
+    <div class="destinos-cards">
+      <div class="card">
+
+        <div class="card-content">
+          <h3>Alagoas</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing sciunt deserunt, alias illo!</p>
+        </div>
+        <button>Saiba mais</button>
+      </div>
+
+      <div class="card">
+
+        <div class="card-content">
+          <h3>Fortaleza</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing sciunt deserunt, alias illo!</p>
+        </div>
+        <button>Saiba mais</button>
+      </div>
+
+      <div class="card">
+
+        <div class="card-content">
+          <h3>Natal</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing sciunt deserunt, alias illo!</p>
+        </div>
+        <button>Saiba mais</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="contato-card">
+      <h1>Entre em contato</h1>
+      <ul>
+        <li><i data-feather="map-pin"></i>Avenida Oceânica, 93, Barra-Salvador/BA</li>
+        <li><i data-feather="mail"></i>contato@dendeagenciadeviagens.com</li>
+        <li><i data-feather="phone"></i>(71) 4100-0041</li>
+      </ul>
+    </div>
+    <!--The div element for the map -->
+    <div id="map"></div>
+  </section>
+
+
+  <script>
+    feather.replace();
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      // var uluru = {lat: -25.344, lng: 131.036};
+      var uluru = { lat: -13.00974, lng: -38.53117 };
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementById('map'), { zoom: 4, center: uluru });
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({ position: uluru, map: map });
+    }
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+  </script>
+</body>
+
+</html>
