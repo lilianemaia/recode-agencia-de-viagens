@@ -56,6 +56,7 @@ header nav ul li:hover {
 
 .header-content {
   color: #fff;
+  text-shadow: rgb(63, 62, 62) 2px 3px 2px;
   font-weight: bold;
   max-width: 400px;
   margin: 150px auto;
@@ -97,7 +98,6 @@ button {
 }
 
 .promocoes .promocoes-cards {
-  /* background: #333; */
   margin: auto;
   max-width: 950px;
   display: flex;
@@ -248,14 +248,12 @@ button {
   margin-bottom: 50px;
 }
 
-/* Set the size of the div element that contains the map */
 #map {
-  height: 400px; /* The height is 400 pixels */
-  width: 100%; /* The width is the width of the web page */
+  height: 400px;
+  width: 100%;
 }
 
 .contato {
-  /* padding: 60px; */
   background-color: #e1e8f7;
   position: relative;
 }
@@ -298,9 +296,6 @@ button {
   margin: 10px;
 }
 
-/* RESPONSIVIDADE */
-
-/* Especial para Mapa */
 @media (max-width: 902px) {
   .contato {
     padding: 60px;
@@ -322,11 +317,9 @@ button {
   }
 }
 
-/* Para Tablet */
 @media (max-width: 767px) {
 }
 
-/* Para mobile */
 @media (max-width: 480px) {
   body {
     margin-bottom: 55px;
